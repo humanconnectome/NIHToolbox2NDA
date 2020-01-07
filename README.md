@@ -11,12 +11,21 @@ Lastly, a crosswalk file - this will map your vars to NDA after transpose is com
 
 Description of variables in the crosswalk: 
 Inst = NIH Toolbox Instrument Name - e.g. the contents of 'Inst' 
+
 hcp_variable =	Name of the Variable being mapped, as it exists in HCP data ready for crossing over - note that for NIH Toolbox Data, HCP Variables are not ready until spaces and special characters have been replaced with underscores
+
 nda_structure =	NDA Structure to which our data is mapped
+
 nda_element =	NDA Element to which our data is mapped
+
 inst_short =	NDAs shorthand for NIH Toolbox Instrument  - this is NOT NDAs name for any particular structure -  it is merely used in crossover mapping - was the name of the unzipped folder that we received with all the mapping information for a particular instrument.
+
 template - name of NDA template provided by Leo for crossover mapping
+
 action_request -	Requests that NDA made of CCF to avoid naming conflicts, or value codings, etc. 
+
 hcp_variable_upload -	HCP Variable name in uploaded file (usually the same as HCP_Variable because NDA took care of the mapping to NDA_Element, but some cases required renames to avoid conflict
+
 requested_python -	Python code to handle Form Requests, unless specialty code required
+
 specialty_code -	Indicator variable for whether form request requires code that cant be handled with a handful of Python statements in the requested_python column.  >=0 means solution required special consideration in crosswalk.py
