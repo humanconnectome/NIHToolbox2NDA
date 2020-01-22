@@ -1,5 +1,5 @@
 
-#program to turn list of unzipped folders from Leo into something that more closely resembles a crosswalk
+#program to turn list of unzipped folders from your NDA data curator into something that more closely resembles a crosswalk
 
 import os
 import pandas as pd
