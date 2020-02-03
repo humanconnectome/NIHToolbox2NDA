@@ -7,7 +7,7 @@ Two are in the .csv format of the IPAD Toolbox applcation export. E.g. a raw Dat
 
 The third necessary file is a csv containing the fields that NDA requires in all of their structures e.g. subjectkey (GUID or pseudo-GUID), src_subject_id (e.g. HCP0211999), interview_age (in months), and gender (misnomer for sex assigned at birth). In HCP data, we link the two sources of information via 'subject' and 'visit.'
 
-Lastly, a crosswalk file - this will map your vars to NDA after transpose is complete. I have placed the crosswalk from HCPA as an example. Any instruments in this crosswalk that are the same as yours (look at 'Inst' column) will work for you. You will have to add any instruments not present, after obtaining variable maps and templates from the NDA for your particular set of NIH Toolbox Data.
+Lastly, a crosswalk file - this will map your vars to NDA after transpose is complete. I have placed the crosswalk from HCPA as an example. Any instruments in this crosswalk that are the same as yours (look at 'Inst' column) will work for you. You will have to add any instruments not present, after obtaining variable maps and templates from the NDA for your particular set of NIH Toolbox Data.  If you get these maps and templates from the NDA in the form of several (dozen) zipped directories, you can use crosswalkscratch.py in this repository to facilitate the transformation of NDA requests into a centralzied crosswalk.
 
 Description of variables in the crosswalk: 
 Inst = NIH Toolbox Instrument Name - e.g. the contents of 'Inst' 
