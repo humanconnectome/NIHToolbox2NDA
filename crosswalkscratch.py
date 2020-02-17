@@ -71,6 +71,12 @@ for i in dirs.Instrument_Short:
         df = df.loc[~(df[localvar] == 'PIN')].copy()
         df['Instrument_Short'] = cw.Instrument_Short[0]
         cw2 = pd.merge(cw, df, how='outer', on='Instrument_Short')
+        # pull the instrument name from the mapping key
+        wb2 = load_workbook(inout + cw.Instrument_Short[0] + '/' + cw.key[0])
+        ws2 = wb2.active
+        df2 = pd.DataFrame(ws2.values)
+        cw2['Inst'] = df2.iloc[df2.shape[0] - 1, 2]  # if Leo changes the format of his mapping file, this will break...
+        # right now, it is grabbing the 3rd column of the last row of the Mapping File, which ccontains the instrument name
         crosswalk_meta = pd.concat([crosswalk_meta, cw2], axis=0,sort=True)
 
 #lastly grab the name of the structure from the varmapfile
