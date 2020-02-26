@@ -7,7 +7,8 @@ from openpyxl import load_workbook
 
 #specify path to the folder that contains the unzipped folders from the NDA - end path in '/' or
 # tell me how I can make this code robust to variations
-inout='/yourpath/NIH_toolbox_crosswalk_docs/'
+#inout='/yourpath/NIH_toolbox_crosswalk_docs/'
+inout='/home/petra/UbWinSharedSpace1/redcap2nda_Lifespan2019/NIH_toolbox_crosswalk_docs/HCPD/'
 
 #open one of the folders that the NDA sent and find the file that contains the list of vars in
 #your file and the list of vars in the NDA as one-to-one pairs
@@ -24,12 +25,12 @@ localvar="HCP-D Element"
 dirs=pd.DataFrame(os.listdir(inout),columns=['Instrument_Short'])
 
 #initialize an empty crosswalk
-crosswalk_meta=pd.DataFrame(columns=['Instrument_Short','key','template','requestfile','varmapfile'])
+crosswalk_meta=pd.DataFrame(columns=['Inst','Instrument_Short','key','template','requestfile','varmapfile'])
 
 #create two lists of for file extensions and/or folders in inout that you don't want to be treated
 # as something to be added to a crosswalk
 list1=['zip','csv','xlsx','pptx'] #file extensions in this folder of folders from Leo that you want to ignore
-list2=['HCPD','temp','added_tocrosswalk','dummypass','almost trash','prepped_structures'] #identify folders you want to ignore
+list2=['drafts','HCPD','temp','added_tocrosswalk','dummypass','almost trash','prepped_structures'] #identify folders you want to ignore
 
 # for the items not in list1 or list2, read the folder contents and turn them into something appendable/mergeable
 # four possible files:
@@ -71,7 +72,7 @@ for i in dirs.Instrument_Short:
         df = df.loc[~(df[localvar] == 'PIN')].copy()
         df['Instrument_Short'] = cw.Instrument_Short[0]
         cw2 = pd.merge(cw, df, how='outer', on='Instrument_Short')
-        # pull the instrument name from the mapping key
+        # pull the instrument name from the mapping key and merge it with the crosswalk_meta
         wb2 = load_workbook(inout + cw.Instrument_Short[0] + '/' + cw.key[0])
         ws2 = wb2.active
         df2 = pd.DataFrame(ws2.values)
@@ -82,8 +83,7 @@ for i in dirs.Instrument_Short:
 #lastly grab the name of the structure from the varmapfile
 crosswalk_meta['structure']=crosswalk_meta.varmapfile.str.split('.').str[-2]
 
-# output this information to a csv in the inout directory so you can easily append it to 
+# output this information to a csv in the inout directory so you can easily append it to
 # the full existing/curated Crosswalkfile that you tweaked for your purposes (by renaming localvar, for example)
-crosswalk_meta[['template','Instrument_Short','structure','NDA Element',localvar,'requestfile']].to_csv(inout+'crosswalk_part_'+localvar+'.csv',index=False)
-
+crosswalk_meta[['Inst','template','Instrument_Short','structure','NDA Element',localvar,'requestfile']].to_csv(inout+'crosswalk_part_'+localvar+'.csv',index=False)
 
