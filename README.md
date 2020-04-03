@@ -1,5 +1,6 @@
 THIS REPO IS UNDER CONSTRUCTION.  WE WILL REMOVE THIS MESSAGE WHEN WE FINALIZE NAMES AND DOCUMENTATION.  USE AT YOUR OWN RISK.
 
+![Data Flow from NIH Toolbox 2 NDA Crosswalk (after collapsing item level and scores from Toolbox into single vector)](SankeyMoreNIHToolbox2NDA.png)
 
 # NIHToolbox2NDA
 collection of python3 commands and a couple of useful functions in a two places that are logically separated by necessary hand editing of a crosswalk file.  
