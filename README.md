@@ -1,10 +1,9 @@
-NIH Toolbox 2 NDA
-Main notebook: IPADexports_2_NDAstructures.ipynb
-
-Visual Description of what the main notebook will do:
 ![Data Flow from NIH Toolbox 2 NDA Crosswalk](SankeyMoreNIHToolbox2NDA.png)
 
 # NIHToolbox2NDA
+Main notebook: 
+
+IPADexports_2_NDAstructures.ipynb
 
 General Overview:
 
