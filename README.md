@@ -34,4 +34,4 @@ Order of operations:
       
 4. Start asking questions by opening an 'issue' in the repo, until I figure out a better way of making this tool more user friendly. Contribute new rows/instruments to what will hopefully be a universal crosswalk for IPAD users, by opening a pull request.  THANK YOU!!!
 
-![Prang Output Structure example] (prang01_outputfor2ndaryUser.png)
+![Prang Output Structure example](prang01_outputfor2ndaryUser.png)
