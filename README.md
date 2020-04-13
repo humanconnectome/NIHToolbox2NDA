@@ -1,5 +1,7 @@
-THIS REPO IS UNDER CONSTRUCTION.  WE WILL REMOVE THIS MESSAGE WHEN WE FINALIZE NAMES AND DOCUMENTATION.  USE AT YOUR OWN RISK.
+NIH Toolbox 2 NDA
+Main notebook: IPADexports_2_NDAstructures.ipynb
 
+Visual Description of what the main notebook will do:
 ![Data Flow from NIH Toolbox 2 NDA Crosswalk](SankeyMoreNIHToolbox2NDA.png)
 
 # NIHToolbox2NDA
