@@ -32,6 +32,6 @@ Order of operations:
 
 3. Run the IPADexports_2_NDAstructures.ipynb jupyter notebook to transform your concatenated IPAD exports into NDA-formatted uploadable csv files based on the Crosswalk that has been curated in this repository.  If the crosswalk doesn't have the instrument you used, you can flesh out necessary rows to append to the existing crosswalk using other tools from this repo (e.g. crosswalkscratch.py, or the grab annotation notebooks using instructions within them)
       
-4. Start asking questions by opening an 'issue' in the repo, until I figure out a better way of making this tool more user friendly. Contribute new rows/instruments to what will hopefully be a universal crosswalk for IPAD users, by opening a pull request.  THANK YOU!!
+4. Start asking questions by opening an 'issue' in the repo, until I figure out a better way of making this tool more user friendly. Contribute new rows/instruments to what will hopefully be a universal crosswalk for IPAD users, by opening a pull request.  THANK YOU!!!
 
 ![Prang Output Structure example] (prang01_outputfor2ndaryUser.png)
