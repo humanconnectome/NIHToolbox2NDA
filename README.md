@@ -6,21 +6,23 @@ THIS REPO IS UNDER CONSTRUCTION.  WE WILL REMOVE THIS MESSAGE WHEN WE FINALIZE N
 
 General Overview:
 
-THE NIH Toolbox Data coming out of the IPAD app looks very different than the format required by the NDA (see ppt for in-depth tutorial), in large part because the NIH Toolbox changed their output format to better handle scalability and versioning across instruments, and the NDA structures were already built.  In order to reformat the IPAD data en masse without losing version information in a merge process (see sankey diagram), we do two main things before embarking on the tedious 1 to 1 mapping of variables via a Crosswalk between data dictionaries.
+THE NIH Toolbox Data coming out of the IPAD app looks very different than the format required by the NDA (see 'Intro to NIH Toolbox Data as it pertains to harmonization with the NDA.pptx' in this repo for deeper description), in large part because the NIH Toolbox changed their output format to better handle scalability and versioning across instruments, and the NDA structures were already built.  In order to reformat the IPAD data en masse without losing version information in a merge process (see sankey diagram), we do two main things before embarking on the tedious 1 to 1 mapping of variables via a Crosswalk between data dictionaries.
 
 1.  We pivot all of the item level scores coming from the 'raw data' file of the IPAD output, such that all item level answers for a given instrument/PIN are put onto a single row which can then be merged with the scored data (already one row per instrument/PIN).  WARNING: this essentially ignores/discards all item level context saved in your NIH TOOLBOX IPad output.  PLEASE SAVE PRE-TRANSFORMED TOOLBOX DATA FOR REFERENCE. The NDA does not have structural capacity to handle pivots of item level context in addition to item level scores at this time. Most assuredly, you will need some or all of this information in the future.
 
-2. With one exception [cogcomp01 - see discussion inline] We contextualize this information by adding the string stored in the NIH Toolbox 'Inst' column (Instrument) into 'version_form,' the string in 'Assessment Name' into 'fneproc', and a created string 'respondent' (parent/child) into 'comqother,' such that multiple (versioned) instruments going to the same structure can be stored as repeated measurements in a queriable way, given the variable to element mappings known through the crosswalk (or because you're savvy with aliases in the NDA's data dictionary API)  
+2. With one exception [cogcomp01 - see discussion inline] we contextualize this information by adding the string stored in the NIH Toolbox 'Inst' column (Instrument) into 'version_form,' the string in 'Assessment Name' into 'fneproc', and a created string 'respondent' (parent/child) into 'comqother,' such that multiple (versioned) instruments going to the same structure can be stored as repeated measurements in a queriable way, given the variable to element mappings known through the crosswalk (or because you're savvy with aliases in the NDA's data dictionary API).  Again, check out the .pptx in this repo, if this isn't clear, for a more in-depth explanation and a chance to question the logic of the decisions encoded here.  
 
 
-With one exception [see cogcomp01 discussion inline], the resulting structures are thus organized as 1 row per subject per visit_date per NIH Toolbox Instrument, per Assessment, per respondent.  Please be careful:  Aliases are a mixture of universal and study-specific.  We chose to map our data directly to the NDA element that would contain the data so as to maintain complete and externaly documented transparency over this process.
+With one exception [see cogcomp01 discussion inline], the resulting structures are thus organized as 1 row per subject per visit_date per NIH Toolbox Instrument, per Assessment, per respondent.  
+
+SPECIAL NOTE:  Some NDA aliases are universal; others are study-specific.  Alias origins or universality in the NDA data dictionary are not immediately clear or easily extracted (see documentation for the NDA data dictionary API).  We chose to map our data directly to the NDA element that would contain the data so as to maintain complete and externally documented transparency over this mapping process.
 
 
 
 
 Order of operations:
 
-0.   If this is your very first behavioral data submission to the NDA, begin with their documentation for a general overview (https://nda.nih.gov/contribute/contribute-data.html), then review the slides from the power point in this repository (Intro to NIH Toolbox Data as it pertains to harmonization with the NDA.pptx), which describe NIH Toolbox data harmonization specifically.  Then open the Crosswalk and review the column definitions in the image below, so you have a general sense of the information it contains and what the next steps will be attempting to accomplish. Note that some of the necessary parts may not make sense until you get ALL THE WAY TO THE END and see what the data will look like when downloaded FROM the NDA (see prang01 example)
+0.   If this is your very first behavioral data submission to the NDA, begin with their documentation for a general overview (https://nda.nih.gov/contribute/contribute-data.html), then review the slides from the power point in this repository (Intro to NIH Toolbox Data as it pertains to harmonization with the NDA.pptx), which describe NIH Toolbox IPAD export data harmonization specifically.  Then open the Crosswalk and review the column definitions in the image below, so you have a general sense of the information it contains and what the subsequent steps will be attempting to accomplish. Note that some of the necessary parts may not make sense until you get ALL THE WAY TO THE END and see what the data will look like when downloaded FROM the NDA (see prang01 example) image at the end of this README
 
 ![Crosswalk Columns](CrosswalkColumns.png)
 
@@ -32,4 +34,4 @@ Order of operations:
       
 4. Start asking questions by opening an 'issue' in the repo, until I figure out a better way of making this tool more user friendly. Contribute new rows/instruments to what will hopefully be a universal crosswalk for IPAD users, by opening a pull request.  THANK YOU!!!
 
-
+![Prang Output Structure example] (prang01_outputfor2ndaryUser.png)
