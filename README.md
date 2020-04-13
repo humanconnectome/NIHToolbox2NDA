@@ -20,9 +20,9 @@ With one exception [see cogcomp01 discussion inline], the resulting structures a
 
 Order of operations:
 
-0.   If this is your very first behavioral data subission to the NDA, begin with their documentation for a general overview (https://nda.nih.gov/contribute/contribute-data.html), then review the slides from the power point in this repository 
-!(Intro to NIH Toolbox Data as it pertains to harmonization with the NDA.pptx) 
-which describe NIH Toolox data specificially.  Then open the Crosswalk and review the column definitions (Crosswalk_Columns.csv), so you have a general sense of the information it contains and what the next steps will be attempting to accomplish. Note that some of the necessary parts may not make sense until you get ALL THE WAY TO THE END and see what the data will look like when downloaded FROM the NDA (see prang01 example)
+0.   If this is your very first behavioral data submission to the NDA, begin with their documentation for a general overview (https://nda.nih.gov/contribute/contribute-data.html), then review the slides from the power point in this repository (Intro to NIH Toolbox Data as it pertains to harmonization with the NDA.pptx), which describe NIH Toolbox data harmonization specifically.  Then open the Crosswalk and review the column definitions in the image below, so you have a general sense of the information it contains and what the next steps will be attempting to accomplish. Note that some of the necessary parts may not make sense until you get ALL THE WAY TO THE END and see what the data will look like when downloaded FROM the NDA (see prang01 example)
+
+![Crosswalk Columns](CrosswalkColumns.png)
 
 1.  Concatenate all the scores files you received from the IPADS.  Concatenate all the raw data (item level) files you received from the IPADs. Check that the unique PINS in the concantenated scores file matches the list of unique pins in the concatenated raw data files.  The logic of this entire transformation depends on having a one to one matching of PINs in these files.  
 
