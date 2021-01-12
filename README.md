@@ -4,6 +4,9 @@
 Main notebook: 
 
 IPADexports_2_NDAstructures.ipynb
+IPADexports_2_NDAstructures_Windows.ipynb #for Windows Users
+IPADexports_2_NDAstructures_HCPspecs.ipynb  #main notebook plus HCP record selections not be generalizable to other studies
+
 
 General Overview:
 
