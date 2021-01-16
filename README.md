@@ -1,15 +1,15 @@
 ![Data Flow from NIH Toolbox 2 NDA Crosswalk](SankeyMoreNIHToolbox2NDA.png)
 
 # NIHToolbox2NDA
-Main notebook: IPADexports_2_NDAstructures.ipynb - necessary functions for the transformation of your IPAD data to NDA format, using the version controlled crosswalk file (Crosswalk_NIH_Toolbox_2_NDA.csv)
+Main notebook: IPADexports_2_NDAstructures.ipynb
+- necessary functions for the transformation of your IPAD data to NDA format, using the version controlled crosswalk file (Crosswalk_NIH_Toolbox_2_NDA.csv)
 
 Other flavors of the main notebook:
 IPADexports_2_NDAstructures_Windows.ipynb
 - has helpful comments for Windows Users
+
 IPADexports_2_NDAstructures_HCPspecificCleanup.ipynb
-- main notebook plus HCP specific record selections and QCsteps
-- not generalizable to other studies but published for complete
-- transparency
+- main notebook plus HCP specific record selections and QCsteps not generalizable to other studies but published for complete transparency
 
 Most important thing to version control: Crosswalk_NIH_Toolbox_2_NDA.csv
 - this file provides the unavoidably hardcoded variable map between IPAD and NDA data universes
