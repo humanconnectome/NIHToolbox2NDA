@@ -5,7 +5,7 @@ Main notebook: IPADexports_2_NDAstructures.ipynb - necessary functions for the t
 
 Other flavors of this main notebook:
 IPADexports_2_NDAstructures_Windows.ipynb #has helpful comments for Windows Users
-IPADexports_2_NDAstructures_HCPspecificss.ipynb  #main notebook plus HCP specific record selections and QCsteps not be generalizable to other studies but published for complete transparency
+IPADexports_2_NDAstructures_HCPspecificCleanup.ipynb  #main notebook plus HCP specific record selections and QCsteps not be generalizable to other studies but published for complete transparency
 
 Most important thing to version control: Crosswalk_NIH_Toolbox_2_NDA.csv - this file provides the unavoidably hardcoded variable map between IPAD and NDA data universes
 
