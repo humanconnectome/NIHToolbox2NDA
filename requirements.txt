@@ -9,7 +9,7 @@ boxsdk==2.3.2
 certifi==2018.11.29
 cffi==1.11.5
 chardet==3.0.4
-cryptography==3.2
+cryptography==3.3.2
 datalad==0.12.2
 decorator==4.4.1
 Deprecated==1.2.7
