@@ -71,7 +71,7 @@ smmap==3.0.1
 tornado==6.0.3
 tqdm==4.30.0
 traitlets==4.3.3
-urllib3==1.24.2
+urllib3==1.26.5
 wcwidth==0.1.7
 Whoosh==2.7.4
 wrapt==1.11.1
