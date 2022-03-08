@@ -432,7 +432,7 @@ validated,Inst,hcp_variable,action_requested,requested_python,specialty_code,hcp
 6=6
 7=7
 "
-,NIH Toolbox Anger-Hostility FF Age 18+ v2.0,anger23,,"studydata['anger23']=studydata['anger23'].fillna(-9999).astype(int).astype(str).str.replace('-9999','')",,anger23,prang01,anger23,NegativeAffect_prang01_template.csv,Anger-Hostility,HCPD HCPA,How true of you is this statement? At times I feel I have gotten a raw deal out of life.,1::7,1=Extremely untrue of me; 7=Extremely true of me,https://nda.nih.gov/data_structure.html?short_name=prang01,NIH Toolbox,Emotion,Anger23,How true of you is this statement?,At times I feel I have gotten a raw deal out of life.,integer,"1=1
+,NIH Toolbox Anger-Hostility FF Age 18+ v2.0,anger23,,"studydata['anger23']=pd.to_numeric(studydata.anger23,errors='coerce').fillna(-9999).astype(int).astype(str).str.replace('-9999','')",,anger23,prang01,anger23,NegativeAffect_prang01_template.csv,Anger-Hostility,HCPD HCPA,How true of you is this statement? At times I feel I have gotten a raw deal out of life.,1::7,1=Extremely untrue of me; 7=Extremely true of me,https://nda.nih.gov/data_structure.html?short_name=prang01,NIH Toolbox,Emotion,Anger23,How true of you is this statement?,At times I feel I have gotten a raw deal out of life.,integer,"1=1
 2=2
 3=3
 4=4
@@ -448,7 +448,7 @@ validated,Inst,hcp_variable,action_requested,requested_python,specialty_code,hcp
 6=6
 7=7
 "
-,NIH Toolbox Anger-Hostility FF Age 18+ v2.0,anger25,,"studydata['anger25']=studydata['anger25'].fillna(-9999).astype(int).astype(str).str.replace('-9999','')",,anger25,prang01,anger25,NegativeAffect_prang01_template.csv,Anger-Hostility,HCPD HCPA,How true of you is this statement? I wonder why sometimes I feel so bitter about things.,1::7,1=Extremely untrue of me; 7=Extremely true of me,https://nda.nih.gov/data_structure.html?short_name=prang01,NIH Toolbox,Emotion,Anger25,How true of you is this statement?,I wonder why sometimes I feel so bitter about things.,integer,"1=1
+,NIH Toolbox Anger-Hostility FF Age 18+ v2.0,anger25,,"studydata['anger25']=pd.to_numeric(studydata.anger25,errors='coerce').fillna(-9999).astype(int).astype(str).str.replace('-9999','')",,anger25,prang01,anger25,NegativeAffect_prang01_template.csv,Anger-Hostility,HCPD HCPA,How true of you is this statement? I wonder why sometimes I feel so bitter about things.,1::7,1=Extremely untrue of me; 7=Extremely true of me,https://nda.nih.gov/data_structure.html?short_name=prang01,NIH Toolbox,Emotion,Anger25,How true of you is this statement?,I wonder why sometimes I feel so bitter about things.,integer,"1=1
 2=2
 3=3
 4=4
