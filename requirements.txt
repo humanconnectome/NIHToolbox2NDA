@@ -54,7 +54,7 @@ pycparser==2.19
 pycurl==7.43.0.3
 PyGithub==1.46
 Pygments==2.7.4
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyrsistent==0.15.7
 python-dateutil==2.7.5
 pytz==2018.9
